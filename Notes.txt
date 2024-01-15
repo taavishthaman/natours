@@ -1,0 +1,17 @@
+API or Application Programming Interface:
+    It is a piece of software that can be used by another piece of software, in order to allow applications to talk
+    to each other.
+
+The REST Architecture:
+    1. Separate API into logical resources: Any information that can be named is a resource. (users, tours, reviews)
+
+    2. Expose structured resource-based URL's: Endpoints should only contain resources(nouns) and use HTTP methods for actions. 
+
+    3. Use HTTP methods (verbs): Endpoints like /getNewTour should not be used and instead use something like GET /tours/:id. 
+        (Resource should be always plural)
+
+    4. Send data as JSON: Main difference between JSON and Object is that in JSON all keys must be strings.
+
+    5. Be stateless: All state should be handled by the client. This means that each request must contain all the
+        information necessary to process a certain request. The server should not have to remember previous requests.
+
