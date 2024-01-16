@@ -15,3 +15,9 @@ The REST Architecture:
     5. Be stateless: All state should be handled by the client. This means that each request must contain all the
         information necessary to process a certain request. The server should not have to remember previous requests.
 
+MongoDB
+
+    In mongoDB, data is stored in BSON format. It is like JSON but typed. So MongoDB documents are typed.
+    Embedding/Denormalizing is the process of including related data into a single document. This allows for
+    quicker access and easier data models.
+    In the case of relational databases however, denormalization is not possible.
