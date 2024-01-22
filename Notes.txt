@@ -21,3 +21,6 @@ MongoDB
     Embedding/Denormalizing is the process of including related data into a single document. This allows for
     quicker access and easier data models.
     In the case of relational databases however, denormalization is not possible.
+
+Mongoose
+    Mongoose is an Object Data Modelling (ODM) library for mongoDB and node.js, a higher level of abstraction.
