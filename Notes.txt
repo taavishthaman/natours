@@ -24,3 +24,18 @@ MongoDB
 
 Mongoose
     Mongoose is an Object Data Modelling (ODM) library for mongoDB and node.js, a higher level of abstraction.
+
+JWT
+    JWT is a stateless authentication solution since it does not store any session related data on the server which
+    also follows the REST priciple of being stateless.
+
+    JWT Flow:
+
+    User hits the /login endpoint using his credentials. The server then checks whether the user exists in the DB and
+    if they do, the server generates a JWT and sends it to the client which is then stored in either cookie or localStorage.
+
+    To access the protected endpoints, the client must send the JWT along with the request headers which then gets validated
+    on the server.
+
+    If we talk about the internal workings, JWT has 3 parts which are Header, Payload and Secret. Header + Payload + Secret
+    together form the JWT. 
