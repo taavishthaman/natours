@@ -39,3 +39,36 @@ JWT
 
     If we talk about the internal workings, JWT has 3 parts which are Header, Payload and Secret. Header + Payload + Secret
     together form the JWT. 
+
+
+DATA MODELLING:
+
+    1) Types of Relationships b/w data: 
+        1:1, 1:Many and Many:Many. 1:Many can be further subdivided into 1:Few, 1:Many and 1:Ton.
+
+    2) Referencing vs Embedding:
+        In the referenced(Normalized) form two datasets are nicely separated and are referenced via Ids.
+        In the embedded form(Denormalized), data is embedded in the document itself.
+
+    3) Framework for referencing and embedding:
+
+        Use 3 criteria to take the decision
+
+        1. Type of relationships that exists between datasets.
+            1:Few and 1:Many (Embedding)
+            1:Many and 1:Ton (Referencing)
+
+        2. Determine data access patterns.
+            High Read/Write Ratio (Use Embedding)
+            High Write/Read Ratio (Use Referencing)
+
+        3. Data Closeness (How much the data is really related and how we want to query it).
+            Data REALLY belongs together (Use Embedding)
+            We frequently need to query both datasets on their own (Use Normalizing/Referncing)
+
+    4) Types of Referncing:
+        Child Referencing: Keep references to related child documents in a parent document inside an array.
+        Parent Referencing: In each child document, there is a reference to the parent.
+        Two-Way Referencing: Parent and Child have refernces to each other. Used to create Many:Many relationships.
+
+    In general always favour embedding, unless there is a reason not to.
